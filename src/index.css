@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible keyboard focus, kept consistent across all interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #B9874A;
+  outline-offset: 3px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer components {
+  .eyebrow-rule {
+    @apply flex items-center justify-center gap-4 text-xs sm:text-sm uppercase tracking-widest2 text-brass-600 font-semibold;
+  }
+  .eyebrow-rule::before,
+  .eyebrow-rule::after {
+    content: '';
+    @apply h-px flex-1 bg-brass/40 max-w-[120px] sm:max-w-[220px];
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 border border-ink/30 px-7 py-3 text-sm font-medium tracking-wide text-ink transition-colors duration-300 hover:border-brass hover:bg-brass hover:text-white;
+  }
+  .btn-solid {
+    @apply inline-flex items-center justify-center gap-2 bg-brass px-7 py-3 text-sm font-medium tracking-wide text-white transition-colors duration-300 hover:bg-brass-600;
+  }
+  .icon-circle {
+    @apply flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 text-ink transition-colors duration-300 hover:border-brass hover:text-brass;
+  }
+}
+
+/* Hide scrollbar for the location rail / mobile carousels while staying scrollable */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
