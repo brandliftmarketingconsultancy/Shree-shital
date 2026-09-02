@@ -17,9 +17,9 @@ export default function AboutHero() {
 
       {/* Sub-navigation bar — mirrors the "Know Us" sub-menu in the reference */}
       <div className="absolute inset-x-0 top-0 flex items-center gap-6 px-5 py-5 sm:px-8 lg:px-12">
-        <span className="text-sm font-medium text-white/60">Know Us</span>
-        <span className="text-white/40">/</span>
-        <nav className="flex items-center gap-5 sm:gap-8">
+        <span className="text-sm font-medium text-white/60">About Us</span>
+        {/* <span className="text-white/40">/</span> */}
+        {/* <nav className="flex items-center gap-5 sm:gap-8">
           {aboutPage.hero.subNav.map((item) => (
             <button
               key={item}
@@ -33,7 +33,7 @@ export default function AboutHero() {
               {item}
             </button>
           ))}
-        </nav>
+        </nav> */}
       </div>
     </div>
   )

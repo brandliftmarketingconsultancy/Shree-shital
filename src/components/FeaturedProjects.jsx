@@ -53,8 +53,8 @@ export default function FeaturedProjects() {
                       {project.name}
                     </h3>
                     <p className="mt-1 text-sm text-white/85">{project.location}</p>
-                    <p className="mt-3 text-sm text-white/90">{project.price}</p>
-                    <p className="text-sm text-white/90">{project.possession}</p>
+                    {/* <p className="mt-3 text-sm text-white/90">{project.price}</p> */}
+                    {/* <p className="text-sm text-white/90">{project.possession}</p> */}
                     <p className="text-sm text-white/90">{project.config}</p>
                   </div>
                   <Link to="/projects" className="btn-solid">

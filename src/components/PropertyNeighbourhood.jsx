@@ -1,11 +1,19 @@
-import { Train, Navigation, Plane, School } from 'lucide-react'
+import { Train, Navigation, Plane, School,Bus,MapPinned, MapPin,GraduationCap,Hospital,Route,Fuel,Pill, } from 'lucide-react'
 import SectionHeading from './SectionHeading.jsx'
 
 const ICONS = {
-  train: Train,
   road: Navigation,
   plane: Plane,
-  school: School,
+  School: School,
+  Bus: Bus,
+  MapPinned: MapPinned,
+  MapPin: MapPin,
+  GraduationCap: GraduationCap,
+  Hospital: Hospital,
+  Route: Route,
+  Fuel: Fuel,
+  Train: Train,
+  Pill: Pill,
 }
 
 export default function PropertyNeighbourhood({ project }) {

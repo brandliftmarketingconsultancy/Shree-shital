@@ -1,5 +1,6 @@
 import SectionHeading from './SectionHeading.jsx'
 import { aboutPage } from '../data/siteData.js'
+import { Link } from "react-router-dom";
 
 export default function OurPurpose() {
   const { heading, image, tagline, body } = aboutPage.purpose
@@ -28,9 +29,9 @@ export default function OurPurpose() {
             <div className="mt-6 h-px w-12 bg-brass" />
             <p className="mt-6 leading-relaxed text-ink/70">{body}</p>
 
-            <a href="#contact" className="btn-outline mt-10 inline-flex">
+            <Link to="/#contact" className="btn-outline mt-10 inline-flex">
               Get In Touch
-            </a>
+            </Link>
           </div>
         </div>
       </div>

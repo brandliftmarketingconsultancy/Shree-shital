@@ -1,7 +1,7 @@
 import { ArrowLeft } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
-const SUB_NAV = ['Overview', 'Location', 'Price', 'Amenities', 'Gallery', 'Download']
+const SUB_NAV = ['Overview', 'Location', 'Amenities', 'Gallery']
 
 export default function PropertyHero({ project }) {
   const navigate = useNavigate()
@@ -45,10 +45,10 @@ export default function PropertyHero({ project }) {
         </h1>
         <p className="mt-1 text-sm text-white/80">{project.location}</p>
         <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-white/90">
-          <span>{project.price}</span>
-          <span className="text-white/40">|</span>
-          <span>Possession {project.possession}</span>
-          <span className="text-white/40">|</span>
+          {/* <span>{project.price}</span> */}
+          {/* <span className="text-white/40"></span> */}
+          {/* <span>Possession {project.possession}</span> */}
+          {/* <span className="text-white/40"></span> */}
           <span>{project.config}</span>
         </div>
       </div>

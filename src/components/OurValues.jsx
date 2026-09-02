@@ -8,10 +8,18 @@ export default function OurValues() {
       <div className="mx-auto max-w-site">
         <SectionHeading>Our Values</SectionHeading>
 
-        <h2 className="mt-6 max-w-3xl font-display text-2xl font-light leading-snug text-ink sm:text-3xl lg:text-4xl">
-          Crafting spaces that spark joy &mdash; one community, one family, one
-          home at a time.
-        </h2>
+        <h2 className="mx-auto mt-8 max-w-5xl text-center font-display text-3xl font-extralight leading-[1.15] tracking-[-0.02em] text-ink sm:text-4xl lg:text-[3.25rem]">
+  Spaces that are planned with care—
+  <span className="mt-2 block text-brass-600">
+    for the people who will actually live in them.
+  </span>
+</h2>
+
+<p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-ink/70">
+  Every residential township we build in Balaghat begins with one simple belief:
+  exceptional communities are created for the families who call them home, not
+  just for the pages of a sales brochure.
+</p>
 
         <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
           {values.map((v) => (

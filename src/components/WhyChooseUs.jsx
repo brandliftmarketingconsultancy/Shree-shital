@@ -1,13 +1,15 @@
-import { Award, Clock, ShieldCheck, Users } from 'lucide-react'
+import {Award, ShieldCheck,Handshake,Home,TrendingUp,MapPin,Building2,}from 'lucide-react'
 import { useRef, useEffect } from 'react'
 import SectionHeading from './SectionHeading.jsx'
 import { trustPillars } from '../data/siteData.js'
 
 const ICONS = {
-  shield: ShieldCheck,
-  award: Award,
-  clock: Clock,
-  users: Users,
+  planning: Building2,
+  quality: ShieldCheck,
+  customer: Handshake,
+  lifestyle: Home,
+  investment: TrendingUp,
+  location: MapPin,
 }
 
 export default function WhyChooseUs() {
@@ -67,7 +69,7 @@ export default function WhyChooseUs() {
         <SectionHeading>Why Choose Us</SectionHeading>
 
         <h2 className="mx-auto mt-6 max-w-2xl text-center font-display text-2xl font-light leading-snug text-ink sm:text-3xl lg:text-4xl">
-          Built on trust, delivered with care.
+          Built on Local Understanding, Delivered With Care
         </h2>
       </div>
 

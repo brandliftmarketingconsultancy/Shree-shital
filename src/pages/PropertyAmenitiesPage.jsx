@@ -19,7 +19,7 @@ export default function PropertyAmenitiesPage() {
   ) || []
 
   // Use gallery images as amenity slides since each amenity has its own vibe
-  const slides = project.gallery || []
+  const slides = project.amenities?.items?.map((item) => item.image).filter(Boolean) || []
   const go = (dir) => setActive((v) => (v + dir + slides.length) % slides.length)
 
   return (
@@ -71,9 +71,8 @@ export default function PropertyAmenitiesPage() {
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === active ? 'w-8 bg-brass' : 'w-4 bg-ink/20'
-              }`}
+              className={`h-1.5 rounded-full transition-all duration-300 ${i === active ? 'w-8 bg-brass' : 'w-4 bg-ink/20'
+                }`}
             />
           ))}
         </div>

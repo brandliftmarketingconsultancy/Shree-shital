@@ -55,16 +55,39 @@ export default function PropertyGalleryPage() {
 
         {/* Masonry-style 2-col grid — first image is large, rest smaller */}
         <div className="mt-10 columns-1 gap-4 sm:columns-2">
-          {items.map((src, i) => (
-            <div key={i} className="mb-4 overflow-hidden bg-sand break-inside-avoid">
-              <img
-                src={src}
-                alt={`${project.name} ${tab} ${i + 1}`}
-                loading="lazy"
-                className="w-full object-cover transition-transform duration-700 hover:scale-105"
-              />
-            </div>
-          ))}
+        {items.map((item, i) => (
+  <div key={i} className="mb-4 overflow-hidden bg-sand break-inside-avoid">
+    {tab === 'Videos' ? (
+      <a
+        href={item.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block relative group"
+      >
+        <img
+          src={item.thumbnail}
+          alt={item.title}
+          loading="lazy"
+          className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+
+        {/* Play button */}
+        <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-2xl">
+            ▶
+          </div>
+        </div>
+      </a>
+    ) : (
+      <img
+        src={item}
+        alt={`${project.name} Image ${i + 1}`}
+        loading="lazy"
+        className="w-full object-cover transition-transform duration-700 hover:scale-105"
+      />
+    )}
+  </div>
+))}
         </div>
       </div>
     </main>

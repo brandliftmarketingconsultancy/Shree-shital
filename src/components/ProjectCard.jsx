@@ -51,9 +51,9 @@ export default function ProjectCard({ project }) {
 
         {/* Price + possession */}
         <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink/70">
-          <span className="font-medium text-ink">{project.price}</span>
-          <span className="text-ink/30">|</span>
-          <span><span className="font-medium text-ink">Possession Date</span> {project.possession}</span>
+          {/* <span className="font-medium text-ink">{project.price}</span> */}
+          {/* <span className="text-ink/30">|</span> */}
+          {/* <span><span className="font-medium text-ink">Possession Date</span> {project.possession}</span> */}
         </div>
         <p className="mt-1 text-sm text-ink/60">{project.config}</p>
       </div>

@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
 import { brand, footerColumns } from '../data/siteData.js'
+import { Link } from 'react-router-dom'
 
 const socials = [
   { Icon: Facebook, label: 'Facebook' },
@@ -18,9 +19,7 @@ export default function Footer() {
               About {brand.fullName}
             </h3>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
-              Established with a commitment to quality and design, Aurelia
-              Properties is currently developing landmark residential and
-              commercial projects across India&rsquo;s major cities.
+              Shree Sheetal is a real estate developer in Balaghat building residential townships, premium plots, and luxury villas designed for lasting value.
             </p>
           </div>
 
@@ -28,35 +27,45 @@ export default function Footer() {
             <h3 className="font-display text-lg text-white">Work With Us</h3>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
-                <a href="#contact" className="font-semibold text-white hover:text-brass-400">
+                <Link
+                  to="/contact"
+                  className="font-semibold text-white hover:text-brass-400"
+                >
                   Enquire
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="font-semibold text-white hover:text-brass-400">
+                <Link
+                  to="/contact"
+                  className="font-semibold text-white hover:text-brass-400"
+                >
                   Schedule A Site Visit
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
           {footerColumns.map((col) => (
-            <div key={col.title}>
-              <h3 className="font-display text-lg text-white">{col.title}</h3>
-              <ul className="mt-4 space-y-3 text-sm">
-                {col.links.map((link) => (
-                  <li key={link}>
-                    <a href="#footer" className="hover:text-brass-400">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+  <div key={col.title}>
+    <h3 className="font-display text-lg text-white">{col.title}</h3>
+
+    <ul className="mt-4 space-y-3 text-sm">
+      {col.links.map((link) => (
+        <li key={link.label}>
+          <Link
+            to={link.to}
+            className="hover:text-brass-400"
+          >
+            {link.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+))}
         </div>
 
-        <div className="mt-14 flex flex-col items-start gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+        {/* <div className="mt-14 flex flex-col items-start gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
             <span className="text-sm text-white/60">Follow us on</span>
             <div className="flex items-center gap-3">
@@ -73,7 +82,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
+           <div className="flex items-center gap-3">
             <a
               href="#footer"
               className="rounded border border-white/20 px-4 py-2 text-xs font-medium text-white/80 hover:border-brass hover:text-brass-400"
@@ -86,8 +95,8 @@ export default function Footer() {
             >
               Google Play
             </a>
-          </div>
-        </div>
+          </div> 
+        </div> */}
       </div>
 
       <div className="border-t border-white/10 px-5 py-5 sm:px-8 lg:px-12">

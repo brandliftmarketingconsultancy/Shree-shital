@@ -42,7 +42,7 @@ export default function PressReleases() {
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-ink/80">
                   <span className="font-semibold text-ink">Amenities Overview:</span>{' '}
-                  {p.title}, {p.date}
+                  {p.title} {p.date}
                 </p>
               </article>
             ))}
@@ -70,14 +70,14 @@ export default function PressReleases() {
           </button>
           <div className="flex gap-2">
             {Array.from({ length: maxStart + 1 }).map((_, i) => (
-              <button
-                key={i}
-                aria-label={`Go to Amenities Overview group ${i + 1}`}
-                onClick={() => setStart(i)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === start ? 'w-8 bg-brass' : 'w-4 bg-ink/20'
-                }`}
-              />
+             <button
+  key={i}
+  aria-label={`Go to Amenities Overview group ${i + 1}`}
+  onClick={() => setStart(i)}
+  className={`h-1.5 w-4 rounded-full transition-colors duration-300 ${
+    i === start ? 'bg-brass' : 'bg-ink/20'
+  }`}
+/>
             ))}
           </div>
           <button
@@ -91,7 +91,7 @@ export default function PressReleases() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <a href="#footer" className="btn-outline">
+          <a href="/projects" className="btn-outline">
             Explore
           </a>
         </div>
