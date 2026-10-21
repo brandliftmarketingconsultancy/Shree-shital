@@ -35,7 +35,7 @@ export const heroSlides = [
     headline: 'Thoughtfully Planned Living, Rooted in Balaghat',
     subcopy:
       'Build something that lasts. A home your family will grow into. A legacy you\'ll be proud of',
-    image: '/assets/laxuriya/sheetal_laxuriya.webp',
+    image: '/assets/laxuriya/sheetal_laxuriya.jpg',
     logo: '/assets/sheetal-luxuria-logo-bright.png',
   },
   {
@@ -53,7 +53,7 @@ export const heroSlides = [
     headline: 'Homes and Townships Designed for Balaghat\'s Next Chapter',
     subcopy:
       'Sustainable construction and community-first planning, designed to last for decades.',
-    image: '/assets/vihar/gate.webp',
+    image: '/assets/vihar/gate-1.jpg',
     logo: '/assets/sheetal-vihar-logo-dark.png',
   },
   {
@@ -97,13 +97,13 @@ export const values = [
 export const featuredProjects = [
   {
     id: 1,
-    name: 'Sheetal laxuriya',
+    name: 'Sheetal Luxuria',
     location: 'INFRONT OF INDIAN OIL, ROAD, Devtola, Balaghat',
     price: 'INR 95 L onwards',
     possession: 'Possession June 2028',
-    config: '2 & 3 BHK',
+    config: '2, 3 & 4 BHK',
     image:
-      "/assets/laxuriya/sheetal_laxuriya.webp",
+      "/assets/laxuriya/sheetal_laxuriya.jpg",
   },
   {
     id: 2,
@@ -111,7 +111,7 @@ export const featuredProjects = [
     location: 'katangi, Madhya Pradesh',
     price: 'INR 1.62 Cr. onwards',
     possession: 'Possession January 2027',
-    config: '1, 2 & 3 BHK',
+    config: '2,3 & 4 BHK',
     image: "/assets/regalia/gate_view_jpg.webp",
   },
 
@@ -121,9 +121,9 @@ export const featuredProjects = [
     location: 'lalburra, Balaghat',
     price: 'INR 2.4 Cr. onwards',
     possession: 'Possession March 2027',
-    config: '2 & 3 BHK',
+    config: '2,3 & 4 BHK',
     image:
-      '/assets/vihar/gate.webp',
+      '/assets/vihar/gate-1.jpg',
   },
   {
     id: 4,
@@ -137,11 +137,11 @@ export const featuredProjects = [
   },
   {
     id: 5,
-    name: 'Dharam Greens',
+    name: 'Dharam Grreens',
     location: 'Nawegaon, Balaghat',
     price: 'INR 2.4 Cr. onwards',
     possession: 'Possession March 2027',
-    config: '2 & 3 BHK',
+    config: '2, 3 & 4 BHK',
     image:
       '/assets/dharamgreens/gate.webp',
   },
@@ -159,9 +159,9 @@ export const pressReleases = [
     id: 1,
     title:
       'Indoor Play Area for Children',
-    
+
     image:
-      '/assets/laxuriya/idore_games-1.webp',
+      '/assets/laxuriya/sheetal_laxuriya_pool.jpg',
   },
   {
     id: 2,
@@ -176,7 +176,7 @@ export const pressReleases = [
       'Lush Green Garden',
     date: '02 January, 2026',
     image:
-      '/assets/vihar/garden.webp',
+      '/assets/vihar/pool.jpg',
   },
 ]
 
@@ -314,7 +314,9 @@ export const allProjects = [
 
   {
     id: 1,
+    slug: 'sheetal-vatika',
     name: 'Sheetal Vatika',
+    propertyType: 'Commercial and Residential',
     location: ' Waraseoni road, Garra, Balaghat',
     price: 'INR 2.4 Cr. onwards',
     possession: 'Mar 2027',
@@ -325,15 +327,15 @@ export const allProjects = [
     overviewImage: '/assets/vatika/house.webp',
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3704.207009947598!2d80.1488734!3d21.8109312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a5922c31f437b%3A0x7ee16ebaa891ef7f!2sSheetal%20Vatika!5e0!3m2!1sen!2sin!4v1785515999543!5m2!1sen!2sin',
 
-   neighbourhood: [
-  { icon: 'Bus', label: 'Balaghat Bus Stand', distance: '4.5 km' },
-  { icon: 'MapPinned', label: 'Garra Chowk', distance: '400 m' },
-  { icon: 'MapPin', label: 'Ambedkar Chowk', distance: '4.5 km' },
-  { icon: 'GraduationCap', label: 'Sardar Patel University', distance: '4.5 km' },
-],
+    neighbourhood: [
+      { icon: 'Bus', label: 'Balaghat Bus Stand', distance: '4.5 km' },
+      { icon: 'MapPinned', label: 'Garra Chowk', distance: '400 m' },
+      { icon: 'MapPin', label: 'Ambedkar Chowk', distance: '4.5 km' },
+      { icon: 'GraduationCap', label: 'Sardar Patel University', distance: '4.5 km' },
+    ],
     amenities: {
       items: [
-        { icon: 'waves', label: 'Swimming Pool',  image: '/assets/vatika/cricket.webp' },
+        { icon: 'waves', label: 'Swimming Pool', image: '/assets/vatika/cricket.webp' },
         { icon: 'dumbbell', label: 'Fitness Center', image: '/assets/vatika/basketball.webp' },
         { icon: 'coffee', label: 'Wellness Cafe', image: '/assets/vatika/temple.webp' },
       ],
@@ -366,12 +368,12 @@ export const allProjects = [
       "/assets/vatika/tank-3.png",
       "/assets/vatika/vatika-name.png",
       // "/assets/vatika/",
-      
+
     ],
 
     videos: [
       {
-        url: "/assets/vatika/DJI_0316.MP4",
+        url: "https://www.instagram.com/reel/DdDxjRYxNxo/?vrfl=OW0zbnAzZDdla2tp",
         thumbnail: "/assets/vatika/cricket.webp",
         title: "Project Walkthrough",
       },
@@ -381,11 +383,13 @@ export const allProjects = [
 
   {
     id: 2,
+    slug: 'sheetal-regalia',
     name: 'Sheetal Regalia',
+    propertyType: 'Residential',
     location: 'katangi, Madhya Pradesh',
     price: 'INR 1.62 Cr. onwards',
     possession: 'Jan 2027',
-    config: '1, 2 & 3 BHK',
+    config: ' 2, 3 & 4 BHK',
     status: 'Under Construction',
     image: "/assets/regalia/gate_view_jpg.webp",
 
@@ -395,20 +399,20 @@ export const allProjects = [
 
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3705.6367213431236!2d79.79791999999999!3d21.755605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDQ1JzIwLjIiTiA3OcKwNDcnNTIuNSJF!5e0!3m2!1sen!2sin!4v1785747719917!5m2!1sen!2sin',
 
-neighbourhood: [
-  { icon: 'School', label: 'Government School Katangi', distance: '1.5 km' },
-  { icon: 'Bus', label: 'Bus Stand Katangi', distance: '2.5 km' },
-  { icon: 'Hospital', label: 'Government Hospital Katangi', distance: '2.1 km' },
-  { icon: 'Route', label: 'Tumsar Road', distance: '100 m' },
-],
+    neighbourhood: [
+      { icon: 'School', label: 'Government School Katangi', distance: '1.5 km' },
+      { icon: 'Bus', label: 'Bus Stand Katangi', distance: '2.5 km' },
+      { icon: 'Hospital', label: 'Government Hospital Katangi', distance: '2.1 km' },
+      { icon: 'Route', label: 'Tumsar Road', distance: '100 m' },
+    ],
 
     amenities: {
       items: [
-        { icon: 'waves', label: 'Swimming Pool', image: '/assets/regalia/garden.webp' },
+        // { icon: 'waves', label: 'Swimming Pool', image: '/assets/regalia/garden.webp' },
         { icon: 'dumbbell', label: 'Fitness Center', image: '/assets/regalia/day_view.webp' },
         { icon: 'coffee', label: 'Wellness Cafe', image: '/assets/regalia/night_view.webp' },
-        { icon: 'sparkles', label: 'Spa & Hydrotherapy', image: '/assets/regalia/park_view.webp' },
-        { icon: 'activity', label: 'Yoga Studio', image: '/assets/regalia/park_view.webp' },
+        // { icon: 'sparkles', label: 'Spa & Hydrotherapy', image: '/assets/regalia/park_view.webp' },
+        // { icon: 'activity', label: 'Yoga Studio', image: '/assets/regalia/park_view.webp' },
       ],
 
       image:
@@ -418,8 +422,8 @@ neighbourhood: [
     gallery: [
       "/assets/regalia/day_view.webp",
       "/assets/regalia/night_view.webp",
-      "/assets/regalia/garden.webp",
-      "/assets/regalia/park_view.webp",
+      // "/assets/regalia/garden.webp",
+      // "/assets/regalia/park_view.webp",
       "/assets/regalia/showcase.webp",
       "/assets/regalia/showcase-2.webp",
       "/assets/regalia/showcase-3.webp",
@@ -431,7 +435,7 @@ neighbourhood: [
 
     videos: [
       {
-        url: "https://www.instagram.com/reel/Cttor7wram9/",
+        url: "https://www.instagram.com/reel/Db-folVScun/?psln=YXo0MW00Y3V0ZGtn",
         thumbnail: "/assets/regalia/showcase-2.webp",
         title: "Project Walkthrough",
       }
@@ -439,46 +443,74 @@ neighbourhood: [
   },
   {
     id: 3,
-    name: 'Sheetal laxuriya',
+    slug: 'sheetal-luxuria',
+    name: 'Sheetal Luxuria',
+    propertyType: 'Commercial and Residential',
     location: 'INFRONT OF INDIAN OIL, ROAD, Devtola, Balaghat',
     price: 'INR 95 L onwards',
     possession: 'Jun 2028',
-    config: '2 & 3 BHK',
+    config: '2, 3 & 4 BHK',
     status: 'Under Construction',
-    image: "/assets/laxuriya/sheetal_laxuriya.webp",
+    image: "/assets/laxuriya/sheetal_laxuriya.jpg",
     overviewTagline: 'Wake up to tranquil lakeside living in the heart of Pune.',
-    overviewImage: '/assets/laxuriya/sheetal_laxuriya_pool.webp',
+    overviewImage: '/assets/laxuriya/sheetal_laxuriya_pool.jpg',
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3703.7928089995107!2d80.20892649999999!3d21.8269348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a5b9c87628f19%3A0x4aeb52d55ab37245!2sSHEETAL%20LUXURIA!5e0!3m2!1sen!2sin!4v1785516347576!5m2!1sen!2sin',
 
-   neighbourhood: [
-  { icon: 'School', label: 'Ojas School', distance: '350 m' },
-  { icon: 'Fuel', label: 'Indian Oil Petrol Pump', distance: '400 m' },
-  { icon: 'Bus', label: 'Bus Stand Balaghat', distance: '3.5 km' },
-  { icon: 'MapPinned', label: 'Hanuman Chowk Balaghat', distance: '4 km' },
-],
+    neighbourhood: [
+      { icon: 'School', label: 'Ojas School', distance: '350 m' },
+      { icon: 'Fuel', label: 'Indian Oil Petrol Pump', distance: '400 m' },
+      { icon: 'Bus', label: 'Bus Stand Balaghat', distance: '3.5 km' },
+      { icon: 'MapPinned', label: 'Hanuman Chowk Balaghat', distance: '4 km' },
+    ],
     amenities: {
-      items: [
-        { icon: 'waves', label: 'Swimming Pool', image: '/assets/laxuriya/sheetal_laxuriya_pool.webp' },
-        { icon: 'dumbbell', label: 'Fitness Center', image: '/assets/laxuriya/gym-1.webp' },
-        { icon: 'coffee', label: 'Wellness Cafe', image: '/assets/laxuriya/gym-3.webp' },
-        { icon: 'sparkles', label: 'Spa & Hydrotherapy', image: '/assets/laxuriya/gym-5.webp' },
-        { icon: 'activity', label: 'Yoga Studio', image: '/assets/laxuriya/idore_games-2.webp' },
-      ],
+     items: [
+    { icon: 'waves',       label: 'Swimming Pool',     image: '/assets/laxuriya/sheetal_laxuriya_pool.jpg' },
+    { icon: 'dumbbell',    label: 'Fitness Center',    image: '/assets/laxuriya/gym-2.jpeg' },
+    { icon: 'heart-pulse', label: 'Wellness & Yoga',   image: '/assets/laxuriya/gym_entrance.jpeg' },
+    { icon: 'gamepad-2',   label: 'Indoor Games',      image: '/assets/laxuriya/games.jpeg' },
+    { icon: 'trophy',      label: 'Indoor Recreation', image: '/assets/laxuriya/indore_games.jpeg' },
+    { icon: 'cake',        label: 'Kitty Party Area',  image: '/assets/laxuriya/Kitty-1.jpeg' },
+    { icon: 'scissors',    label: 'Salon & Spa',       image: '/assets/laxuriya/salon.jpeg' },
+    { icon: 'coffee',      label: 'Wellness Cafe',     image: '/assets/laxuriya/gym-3.jpeg' }, // swap for a real cafe photo
+  ],
+  gallery: [
+    { category: 'Swimming Pool',     image: '/assets/laxuriya/sheetal_laxuriya_pool.jpg' },
+    { category: 'Wellness & Yoga',   image: '/assets/laxuriya/gym_entrance.jpeg' },
+    { category: 'Fitness Center',    image: '/assets/laxuriya/gym-2.jpeg' },
+    { category: 'Fitness Center',    image: '/assets/laxuriya/gym-3.jpeg' },
+    { category: 'Fitness Center',    image: '/assets/laxuriya/gym-5.jpeg' },
+    { category: 'Indoor Games',      image: '/assets/laxuriya/games.jpeg' },
+    { category: 'Indoor Games',      image: '/assets/laxuriya/game-1.jpeg' },
+    { category: 'Indoor Recreation', image: '/assets/laxuriya/indore_games.jpeg' },
+    { category: 'Indoor Recreation', image: '/assets/laxuriya/idore_games-1.jpeg' },
+    { category: 'Indoor Recreation', image: '/assets/laxuriya/idore_games-2.jpeg' },
+    { category: 'Indoor Recreation', image: '/assets/laxuriya/idore_games-3.jpeg' },
+    { category: 'Kitty Party Area',  image: '/assets/laxuriya/Kitty-1.jpeg' },
+    { category: 'Kitty Party Area',  image: '/assets/laxuriya/kitty-2.jpeg' },
+    { category: 'Kitty Party Area',  image: '/assets/laxuriya/kitty-3.jpeg' },
+    { category: 'Salon',             image: '/assets/laxuriya/salon.jpeg' },
+    { category: 'Salon',             image: '/assets/laxuriya/salon-1.jpeg' },
+    { category: 'Salon',             image: '/assets/laxuriya/salon-2.jpeg' },
+  ],
       image:
         'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1800&q=80',
     },
 
     gallery: [
-      "/assets/laxuriya/gym-2.webp",
-      "/assets/laxuriya/gym_entrance.webp",
-      "/assets/laxuriya/idore_games-1.webp",
-      "/assets/laxuriya/idore_games-2.webp",
+      "/assets/laxuriya/sheetal_laxuriya.jpg",
+      "/assets/laxuriya/sheetal_laxuriya_pool.jpg",
+      "/assets/laxuriya/Kitty-1.jpeg",
+      "/assets/laxuriya/gym-1.jpeg",
+      '/assets/laxuriya/salon-2.jpeg',
+      '/assets/laxuriya/gym-2.jpeg',
+      '/assets/laxuriya/idore_games-2.jpeg',
+
     ],
 
     videos: [
       {
-        url: "https://www.instagram.com/reel/Cttor7wram9/",
-        thumbnail: "/assets/laxuriya/sheetal_laxuriya.webp",
+        url: "https://www.instagram.com/reel/DZ9sgycvA-d/?obrf=NDFrcXptNjlka2Zw",
+        thumbnail: "/assets/laxuriya/sheetal_laxuriya_pool.jpg",
         title: "Project Walkthrough",
       }
     ],
@@ -486,27 +518,29 @@ neighbourhood: [
 
   {
     id: 4,
+    slug: 'sheetal-vihar',
     name: 'Sheetal Vihar',
+    propertyType: 'Residential',
     location: 'Lalbarra, Balaghat',
     price: 'INR 3.1 Cr. onwards',
     possession: 'Dec 2028',
-    config: '3 & 4 BHK',
+    config: '2, 3 & 4 BHK',
     status: 'Under Construction',
-    image: '/assets/vihar/gate2.webp',
+    image: '/assets/vihar/gate-1.jpg',
     overviewTagline: 'Elevated living with breathtaking skyline views.',
-    overviewImage: '/assets/vihar/locality.webp',
+    overviewImage: '/assets/vihar/drone-2.jpg',
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.115367108189!2d80.05651259999999!3d21.9301159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2af5f2d7856b3b%3A0x620c54b1224e6594!2sSheetal%20vihar%20lalbarra!5e0!3m2!1sen!2sin!4v1785515539336!5m2!1sen!2sin',
-neighbourhood: [
-  { icon: 'Pill', label: 'Oriental Pharmacy College', distance: '240 m' },
-  { icon: 'Bus', label: 'Bus Stand Lalburra', distance: '1.7 km' },
-  { icon: 'GraduationCap', label: 'Government College Lalburra', distance: '1.8 km' },
-  { icon: 'Hospital', label: 'Government Hospital', distance: '1.8 km' },
-],
+    neighbourhood: [
+      { icon: 'Pill', label: 'Oriental Pharmacy College', distance: '240 m' },
+      { icon: 'Bus', label: 'Bus Stand Lalburra', distance: '1.7 km' },
+      { icon: 'GraduationCap', label: 'Government College Lalburra', distance: '1.8 km' },
+      { icon: 'Hospital', label: 'Government Hospital', distance: '1.8 km' },
+    ],
     amenities: {
       items: [
-        { icon: 'waves', label: 'Swimming Pool', image:'/assets/vihar/swimming-pool.webp'  },
-        { icon: 'dumbbell', label: 'Fitness Center', image:'/assets/vihar/garden.webp' },
-        { icon: 'coffee', label: 'Wellness Cafe', image:'/assets/vihar/play-area.webp'},
+        { icon: 'waves', label: 'Swimming Pool', image: '/assets/vihar/pool.jpg' },
+        { icon: 'dumbbell', label: 'Fitness Center', image: '/assets/vihar/garden.webp' },
+        { icon: 'coffee', label: 'Wellness Cafe', image: '/assets/vihar/play-area.webp' },
         { icon: 'sparkles', label: 'Spa & Hydrotherapy' },
         { icon: 'activity', label: 'Yoga Studio' },
       ],
@@ -515,68 +549,101 @@ neighbourhood: [
     },
 
     gallery: [
-      '/assets/vihar/gate2.webp',
-      '/assets/vihar/day-view.webp',
-      '/assets/vihar/gate.webp',
-      '/assets/vihar/night-view.webp',
-      '/assets/vihar/play-area.webp',
+      '/assets/vihar/gate-1.jpg',
+      '/assets/vihar/gate-2.jpg',
+      '/assets/vihar/drone-1.jpg',
+      '/assets/vihar/drone-2.jpg',
+      '/assets/vihar/drone-3.jpg',
+      '/assets/vihar/pool.jpg',
+
     ],
     videos: [
       {
-        url: "https://www.instagram.com/reel/Cttor7wram9/",
-        thumbnail: "/assets/vatika/basketball.webp",
+        url: "https://www.instagram.com/reel/Da1_wgQocaa/?xtok=aGJvZzRldjRoZ2F1",
+        thumbnail: "/assets/vihar/drone-1.jpg",
         title: "Project Walkthrough",
       }
     ],
   },
   {
     id: 5,
-    name: 'Dharam Greens',
+    slug: 'dharam-greens',
+    name: 'Dharam Grreens',
+    propertyType: 'Residential',
     location: ' Nawegaon, Balaghat',
     price: 'INR 78 L onwards',
     possession: 'Sep 2027',
-    config: '2 BHK',
+    config: '2, 3 & 4 BHK',
     status: 'Under Construction',
-    image: '/assets/dharamgreens/gate_compressed.webp',
+    image: '/assets/dharamgreens/gate.webp',
     overviewTagline: 'Thoughtfully crafted homes surrounded by lush greenery.',
-    overviewImage: '/assets/dharamgreens/tempel.webp',
+    overviewImage: '/assets/dharamgreens/temple.jpeg',
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3704.7658298205333!2d80.2072455!3d21.789322199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a5b00462db5f9%3A0x1257c7ac6c705c22!2sDharam%20Greens!5e0!3m2!1sen!2sin!4v1785516556414!5m2!1sen!2sin',
 
     neighbourhood: [
-  { icon: 'MapPinned', label: 'Hanuman Chowk', distance: '3.7 km' },
-  { icon: 'Train', label: 'Railway Station', distance: '3.2 km' },
-  { icon: 'MapPin', label: 'Ambedkar Chowk', distance: '4.8 km' },
-  { icon: 'Bus', label: 'Bus Stand Balaghat', distance: '5.4 km' },
-],
+      { icon: 'MapPinned', label: 'Hanuman Chowk', distance: '3.7 km' },
+      { icon: 'Train', label: 'Railway Station', distance: '3.2 km' },
+      { icon: 'MapPin', label: 'Ambedkar Chowk', distance: '4.8 km' },
+      { icon: 'Bus', label: 'Bus Stand Balaghat', distance: '5.4 km' },
+    ],
     amenities: {
-      items: [
-        { icon: 'waves', label: 'Swimming Pool', image:'/assets/dharamgreens/swimming-pool.webp' },
-        { icon: 'dumbbell', label: 'Fitness Center', image:'/assets/dharamgreens/tempel.webp' },
-        { icon: 'coffee', label: 'Wellness Cafe' },
-        { icon: 'sparkles', label: 'Spa & Hydrotherapy' },
-        { icon: 'activity', label: 'Yoga Studio' },
-      ],
+  // Homepage icons + one cover photo each
+  items: [
+    { icon: 'waves',     label: 'Swimming Pool', image: '/assets/dharamgreens/swimming-pool.webp' },
+    { icon: 'landmark',  label: 'Temple',        image: '/assets/dharamgreens/temple.jpeg' },
+    { icon: 'coffee',    label: 'Sitting Area',  image: '/assets/dharamgreens/sittingarea-1.jpeg' },
+    { icon: 'activity',  label: 'Yoga Studio',   image: '/assets/dharamgreens/yoga.jpeg' },
+  ],
+
+  // All photos for the /amenities page
+  gallery: [
+    { category: 'Swimming Pool', image: '/assets/dharamgreens/swimming-pool.webp' },
+    { category: 'Temple',        image: '/assets/dharamgreens/temple.jpeg' },
+    { category: 'Sitting Area',  image: '/assets/dharamgreens/sittingarea-1.jpeg' },
+    { category: 'Yoga Studio',   image: '/assets/dharamgreens/yoga.jpeg' },
+    { category: 'Yoga Studio',   image: '/assets/dharamgreens/yoga-1.jpeg' },
+    { category: 'Yoga Studio',   image: '/assets/dharamgreens/yoga-2.jpeg' },
+    { category: 'Yoga Studio',   image: '/assets/dharamgreens/yoga-3.jpeg' },
+  ],
       image:
         'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1800&q=80',
     },
 
     gallery: [
       '/assets/dharamgreens/garden.webp',
-      '/assets/dharamgreens/tempel.webp',
-     
+      '/assets/dharamgreens/temple.jpeg',
+      '/assets/dharamgreens/temple-1.jpeg',
+      '/assets/dharamgreens/temple-2.jpeg',
+      '/assets/dharamgreens/enterence.jpeg',
+      '/assets/dharamgreens/garden-2.jpeg',
+      '/assets/dharamgreens/garden-3.jpeg',
+      '/assets/dharamgreens/garden-4.jpeg',
+      '/assets/dharamgreens/garden-5.jpeg',
+      '/assets/dharamgreens/garden.jpeg',
+      '/assets/dharamgreens/house.jpeg',
+      '/assets/dharamgreens/pool.jpeg',
+      
+
     ],
     videos: [
       {
-        url: "https://www.instagram.com/reel/Cttor7wram9/",
-        thumbnail: "/assets/vatika/basketball.webp",
+        url: "https://www.instagram.com/reel/DctAFA1tR04/?dlrf=MTR1YWV1cGVxbWw4Yg==",
+        thumbnail: "/assets/dharamgreens/pool.jpeg",
         title: "Project Walkthrough",
       },
       {
-        url: "https://www.instagram.com/reel/DQerpvljCMr/",
-        thumbnail: "/assets/vatika/basketball.webp ",
+        url: "https://www.instagram.com/reel/DctAFA1tR04/?dlrf=MTR1YWV1cGVxbWw4Yg==",
+        thumbnail: "/assets/dharamgreens/swimming-pool.webp",
         title: "Project Walkthrough",
-      }
+      },
     ],
   },
-  
 ]
+
+export function findProject(slug) {
+  return (
+    allProjects.find((p) => p.slug === slug) ||
+    allProjects.find((p) => String(p.id) === slug) // old /projects/1 links
+  )
+}
+

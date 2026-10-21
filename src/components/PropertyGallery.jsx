@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import SectionHeading from './SectionHeading.jsx'
 
 export default function PropertyGallery({ project }) {
-  const { id } = useParams()
   const navigate = useNavigate()
 
   const { gallery } = project
@@ -41,6 +40,7 @@ export default function PropertyGallery({ project }) {
               <button
                 key={i}
                 onClick={() => setActive(i)}
+                aria-label={`Go to page ${i + 1}`}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
                   i === active ? 'w-8 bg-ink' : 'w-5 bg-ink/25'
                 }`}
@@ -51,7 +51,7 @@ export default function PropertyGallery({ project }) {
 
         <div className="mt-10 flex justify-center">
           <button
-            onClick={() => navigate(`/projects/${id}/gallery`)}
+            onClick={() => navigate(`/projects/${project.slug}/gallery`)}
             className="btn-outline"
           >
             View Gallery

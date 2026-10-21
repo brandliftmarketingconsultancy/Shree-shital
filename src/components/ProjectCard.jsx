@@ -13,51 +13,82 @@ const STATUS_ICONS = {
   'Ready to Move': Building2,
 }
 
+const PROPERTY_TYPE_STYLES = {
+  'Commercial and Residential':
+    'bg-brass-50 text-brass-700 border border-brass/30',
+  Residential:
+    'bg-teal-50 text-teal-700 border border-teal-200',
+}
+
 export default function ProjectCard({ project }) {
   const Icon = STATUS_ICONS[project.status] || Building2
 
   return (
-    <Link to={`/projects/${project.id}`} className="block">
-    <article className="group cursor-pointer">
-      {/* Image */}
-      <div className="relative aspect-[4/3] overflow-hidden bg-sand">
-        <img
-          src={project.image}
-          alt={project.name}
-          loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-      </div>
-
-      {/* Meta below image */}
-      <div className="mt-3">
-        <div className="flex items-center justify-between">
-          <p className="text-sm text-ink/55">{project.location}</p>
-          <button
-            aria-label={`More about ${project.name}`}
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-ink/20 text-ink/50 transition-colors hover:border-brass hover:text-brass"
-          >
-            <PlusCircle size={18} />
-          </button>
+    <Link to={`/projects/${project.slug}`} className="block">
+      <article className="group cursor-pointer">
+        {/* Image */}
+        <div className="relative aspect-[4/3] overflow-hidden bg-sand">
+          <img
+            src={project.image}
+            alt={project.name}
+            loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
         </div>
 
-        <h3 className="mt-1 font-display text-xl text-ink">{project.name}</h3>
+        {/* Meta below image */}
+        <div className="mt-3">
+          <div className="flex items-center justify-between">
+            <p className="text-sm text-ink/55">{project.location}</p>
 
-        {/* Status badge */}
-        <span className={`mt-2 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium ${STATUS_STYLES[project.status]}`}>
-          <Icon size={12} />
-          {project.status}
-        </span>
+            <button
+              aria-label={`More about ${project.name}`}
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-ink/20 text-ink/50 transition-colors hover:border-brass hover:text-brass"
+            >
+              <PlusCircle size={18} />
+            </button>
+          </div>
 
-        {/* Price + possession */}
-        <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink/70">
-          {/* <span className="font-medium text-ink">{project.price}</span> */}
-          {/* <span className="text-ink/30">|</span> */}
-          {/* <span><span className="font-medium text-ink">Possession Date</span> {project.possession}</span> */}
+          <h3 className="mt-1 font-display text-xl text-ink">
+            {project.name}
+          </h3>
+
+          {/* Badges */}
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            {/* Status badge */}
+            <span
+              className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium ${STATUS_STYLES[project.status]
+                }`}
+            >
+              <Icon size={12} />
+              {project.status}
+            </span>
+
+            {/* Property type badge */}
+            {project.propertyType && (
+              <span
+                className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${PROPERTY_TYPE_STYLES[project.propertyType] ||
+                  'bg-gray-50 text-gray-700 border border-gray-200'
+                  }`}
+              >
+                {project.propertyType}
+              </span>
+            )}
+          </div>
+
+          {/* Price + possession */}
+          <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink/70">
+            {/* <span className="font-medium text-ink">{project.price}</span> */}
+            {/* <span className="text-ink/30">|</span> */}
+            {/* <span>
+              <span className="font-medium text-ink">Possession Date</span>{' '}
+              {project.possession}
+            </span> */}
+          </div>
+
+          <p className="mt-1 text-sm text-ink/60">{project.config}</p>
         </div>
-        <p className="mt-1 text-sm text-ink/60">{project.config}</p>
-      </div>
-    </article>
+      </article>
     </Link>
   )
-}   
+}

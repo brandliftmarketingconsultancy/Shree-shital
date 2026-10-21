@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { CheckCircle2, Mail, MapPin, Phone } from 'lucide-react'
 import SectionHeading from './SectionHeading.jsx'
-import { brand, contactInfo, featuredProjects } from '../data/siteData.js'
+import { brand, contactInfo, allProjects } from '../data/siteData.js'
 
 const inputClass =
   'mt-2 w-full border bg-white px-4 py-3 text-sm text-ink placeholder:text-ink/40 focus:outline-none'
@@ -9,10 +9,18 @@ const labelClass = 'text-xs font-semibold uppercase tracking-wide text-ink/60'
 // Fixed height so an error message appearing/disappearing never shifts the layout
 const errorClass = 'mt-1 min-h-[1.1rem] text-xs text-red-600'
 
-const initialForm = { name: '', phone: '', email: '', project: 'General Enquiry', message: '' }
+const GENERAL = 'General Enquiry'
+
+const buildInitialForm = (project) => ({
+  name: '',
+  phone: '',
+  email: '',
+  project: project?.name ?? GENERAL,
+  message: '',
+})
 
 // Replace with the "Web app URL" you get from Apps Script → Deploy → New deployment
-const GOOGLE_SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwJHAgxi4gBZd5jXPAHtAQto8byyoUublXrJMbFjCs2o7YYmAWhYHh5F32L8bns_9Cd/exec'
+const GOOGLE_SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwwLjDVJondSyzZrtGCvp3n5HtHpUVU0DIiZz3F9RGoplownyaw4nZdEDADJ9X5VI4/exec'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 // Accepts +91 98765 43210, 9876543210, (987) 654-3210, etc. — at least 7 digits
@@ -53,7 +61,7 @@ function validateForm(form) {
     errors.name = 'Name can only contain letters, spaces, and hyphens.'
   }
 
-if (!phone) {
+  if (!phone) {
     errors.phone = 'Please enter a phone number.'
   } else if (phone.length > PHONE_MAX) {
     errors.phone = 'Phone number is too long.'
@@ -85,8 +93,8 @@ if (!phone) {
   return errors
 }
 
-export default function ContactForm() {
-  const [form, setForm] = useState(initialForm)
+export default function ContactForm({ project }) {
+  const [form, setForm] = useState(() => buildInitialForm(project))
   const [errors, setErrors] = useState({})
   const [touched, setTouched] = useState({})
   const [submitted, setSubmitted] = useState(false)
@@ -124,11 +132,16 @@ export default function ContactForm() {
     }
 
     // Trim before sending so the sheet doesn't collect stray whitespace
+    // Work out which property this lead belongs to
+    const projectId =
+      project?.id ?? allProjects.find((p) => p.name === form.project)?.id ?? null
+
     const cleanForm = {
       name: form.name.trim(),
       phone: form.phone.trim(),
       email: form.email.trim(),
       project: form.project,
+      projectId,
       message: form.message.trim(),
     }
 
@@ -203,7 +216,7 @@ export default function ContactForm() {
                 </p>
                 <button
                   onClick={() => {
-                    setForm(initialForm)
+                    setForm(buildInitialForm(project))
                     setErrors({})
                     setTouched({})
                     setSubmitted(false)
@@ -271,8 +284,8 @@ export default function ContactForm() {
                     onChange={handleChange}
                     className={`${inputClass} ${fieldBorder('project')} appearance-none`}
                   >
-                    <option>General Enquiry</option>
-                    {featuredProjects.map((p) => (
+                    <option>{GENERAL}</option>
+                    {allProjects.map((p) => (
                       <option key={p.id}>{p.name}</option>
                     ))}
                   </select>
